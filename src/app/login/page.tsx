@@ -18,6 +18,7 @@ export default function LoginPage() {
             password,
             redirect: false,
         });
+        console.log("LOGIN RESULT:", result);
 
         if (result?.ok) {
             router.push("/slots");
