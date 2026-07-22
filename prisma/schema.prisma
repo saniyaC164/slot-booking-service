@@ -37,8 +37,6 @@ model Slot {
   startTime   DateTime
   endTime     DateTime
 
-  isBooked    Boolean  @default(false)
-
   booking     Booking?
 }
 
