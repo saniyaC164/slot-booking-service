@@ -18,14 +18,15 @@ enum BookingStatus {
 }
 
 model User {
-  id        String    @id @default(cuid())
-  name      String
-  email     String    @unique
-  password  String
-  role      Role
+  id              String    @id @default(cuid())
+  name            String
+  email           String    @unique
+  password        String
+  role            Role
+  timezone        String    @default("UTC")
 
-  bookings  Booking[]
-  slots     Slot[]    @relation("ProviderSlots")
+  bookings        Booking[]
+  slots           Slot[]    @relation("ProviderSlots")
 }
 
 model Slot {

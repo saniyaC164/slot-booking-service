@@ -7,10 +7,10 @@ Used Auth.js credentials provider for simplicity.
 Used Prisma + PostgreSQL because of strong type safety and fast iteration.
 
 ## Timezones
-Stored all dates in UTC and converted to local timezone in the browser.
+Stored slot timestamps in UTC and formatted them using each user’s saved timezone preference, which keeps the UI consistent for both providers and booking users.
 
 ## Booking Safety
-Used database transaction to prevent double booking.
+Used Prisma transactions and slot ownership checks to prevent double booking and to make rescheduling/cancellation flows safe.
 
 ## Tradeoffs
 Did not implement email notifications.
